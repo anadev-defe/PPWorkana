@@ -1,0 +1,48 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.hidden {
+    display: none;
+}
+.caixaTempo {
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        padding: 10px;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+}
+.caixaCertificado {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+.caixaBonus {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+.caixaOutros {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}

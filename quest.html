@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teste de JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Teste de JavaScript</h1>
+    <p>Tempo restante: <span id="timer"></span></p>
+    <p>Nome do candidato: <input type="text" id="nome"></p>
+    <button onclick="mostrarProximaPergunta(1)">Enviar</button>
+  </header>
+  <main>
+    <div id="pergunta1" class="perguntas" style="display: none;"></div>
+            <p>1. Qual a principal diferença entre <strong>var</strong>, <strong>let</strong> e <strong>const</strong>?</p>
+            <div>
+                <input type="radio" name="q1" value="a"> a) Todas declaram variáveis com escopo global. <br>
+                <input type="radio" name="q1" value="b"> b) <strong>var</strong> e <strong>let</strong> permitem reatribuição, enquanto <strong>const</strong> não. <br>
+                <input type="radio" name="q1" value="c"> c) <strong>const</strong> permite reatribuição, enquanto <strong>var</strong> e <strong>let</strong> não. <br>
+                <input type="radio" name="q1" value="d"> d) Não há diferença entre elas.
+            </div>
+        </div>
+            <!-- resposta letra B -->
+        </div>
+    </div>
+    <button onclick="mostrarProximaPergunta(2)">Próxima</button>
+      <div id="pergunta2" class="perguntas" style="display: none;">
+        <p>2. O que é hoisting em JavaScript?</p>
+        <div class="opcoes">
+            <input type="radio" name="q1" value="a"> a) O processo de elevar variáveis para o topo do escopo antes da execução. <br>
+            <input type="radio" name="q1" value="b"> b) A criação de funções anônimas. <br>
+            <input type="radio" name="q1" value="c"> c) A capacidade de modificar objetos imutáveis. <br>
+            <input type="radio" name="q1" value="d"> d) A forma como o JavaScript interpreta o código assíncrono.
+            <!-- resposta letra A -->
+        </div>
+    </div>
+    <button onclick="mostrarProximaPergunta(3)">Próxima</button>
+      <div id="pergunta3" class="perguntas" style="display: none;">
+        <p>3. Quais os tipos de dados primitivos em JavaScript?</p>
+        <div class="opcoes">
+            <input type="radio" name="q1" value="a"> a) string, number, boolean, null, undefined, symbol <br>
+            <input type="radio" name="q1" value="b"> b) object, array, function <br>
+            <input type="radio" name="q1" value="c"> c) string, number, boolean, object, array <br>
+            <input type="radio" name="q1" value="d"> d) Apenas string e number
+            <!-- resposta letra A -->
+        </div>
+    </div>
+    <button onclick="mostrarProximaPergunta(4)">Próxima</button>
+      <div id="pergunta4" class="perguntas" style="display: none;">
+        <p>4. Qual a principal característica de uma arrow function?</p>
+        <div class="opcoes">
+            <input type="radio" name="q1" value="a"> a) Sintaxe mais concisa e escopo léxico. <br>
+            <input type="radio" name="q1" value="b"> b) Sempre retorna um valor. <br>
+            <input type="radio" name="q1" value="c"> c) Não pode ser usada com métodos de array. <br>
+            <input type="radio" name="q1" value="d"> d) É a única forma de criar funções em JavaScript moderno.
+            <!-- resposta letra A -->
+        </div>
+    </div>
+      <button>Confirmar</button>
+
+    <div class="progresso"></div>
+  </main>
+  <footer>
+    <button>Finalizar</button>
+  </footer>
+  <script>
+    function mostrarProximaPergunta(proximaPergunta) {
+      document.getElementById('pergunta' + (proximaPergunta - 1)).style.display = 'none';
+      document.getElementById('pergunta' + proximaPergunta).style.display = 'block';
+    }
+  </script>
+</body>
+</html>

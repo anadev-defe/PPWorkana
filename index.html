@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Habilidades Técnicas</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="icon" type="img/png" href="imagens/9ohrrl3q.jpg">
+
+</head>
+<body>
+    <h1>Avalie suas habilidades</h1>
+    <p>Para iniciar o teste é só clicar no botão <strong><u>INICIAR</u></strong></p>
+
+
+    
+    <p>Antes de começar, leia as intruções</p>
+
+    <p>Clique fora da caixa para fechá-la</p>
+    
+    <button id="tempo">Tempo máximo</button>
+    <div id="caixaTempo" class="hidden">
+        <p>O tempo máximo para a realização desse teste é de 2 horas a partir do seu ínicio. Então seja esperto e organize um tempo livre para se dar bem nesse teste!!</p>
+    </div>
+    <button id="certificado">Certificado</button>
+    <div id="caixaCertificado" class="hidden">
+        <p>Se você for aprovado, um certificado correspondente ao teste realizado será fornecido. E é IMPORTANTE destacar que a aquisição deste certificado terá custo.</p>
+    </div>
+    <button id="bonus">Bônus</button>
+    <div id="caixaBonus" class="hidden">
+        <p>Notícia incrível! Ao passar neste teste, você ganhará uma certificação oficial que será exibida no seu perfil Workana, aumentando suas chances de conseguir novos projetos e demonstrando sua expertise para os clientes.</p>
+    </div>
+    <button id="outrosTestes">Outros testes</button>
+    <div id="caixaOutros" class="hidden">
+        <p>Caso não seja aprovado, não desanime! Podemos juntos encontrar um projeto que melhor se adapte ao seu conhecimento e experiência, para que você possa brilhar!</p>
+    </div>
+    <!-- colocar instruçoes como, tempo máximo, se aprovado terá certificado e o certificado tem custo e benefício adicional da habilidade no perfil Workana, se não for aprovado pode testar outras habilidades -->
+    
+</div>
+    
+     <p>Além de preecher esses requisitos</p>
+     <div class="requisitos">
+        <ul style="list-style-type: circle;">
+            <li>Ter acesso a um computador com acesso a internet</li>
+            <li>Ter tempo disponível para realizar o teste no tempo previamente estimado</li>
+            <li>Informar ao finalizar o teste para que o resultado seja validado</li>
+        </ul>
+     <!-- colocar os seguintes requisitos: acesso a internet, tempo para realizar o teste até o final, informar assim que completar o teste -->
+    </div>
+    <div class="botao-iniciar">
+    <p>Clique no botão abaixo para iniciar o teste.</p>
+    <script>
+        function irParaQuestionario() {
+          window.location.href = "quest.html"; // Substitua por sua URL
+        }
+        </script>
+    <!-- inserir o botão para iniciar o teste -->
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
