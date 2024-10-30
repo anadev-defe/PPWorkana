@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste de JavaScript</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -8,260 +10,207 @@
     <header>
         <h1>Teste de JavaScript</h1>
         <p>Tempo restante: <span id="timer">120:00</span></p>
-        <p>Nome do candidato: <input type="text" id="nome"></p>
-        <button onclick="mostrarProximaPergunta(1)">Enviar</button>
+        <p>Nome do candidato: <input type="text" id="nome" size="40" placeholder="Seu nome no certificado"></p>
+        <button onclick="iniciarTeste()">Iniciar Teste</button>
         <button onclick="voltarAoMenu()">Voltar ao Menu</button>
     </header>
     
     <main>
-        <div id="perguntaContainer">
-            <div id="pergunta1" class="perguntas" style="display: block;">
-                <p>1. Qual a principal diferença entre <strong>var</strong>, <strong>let</strong> e <strong>const</strong>?</p>
-                <div>
+        <div id="perguntaContainer" style="display: none;">
+            <p id="perguntaTexto">1. Qual a principal diferença entre <strong>var</strong>, <strong>let</strong> e <strong>const</strong>?
+                <div id="opcoes">
                     <input type="radio" name="q1" value="a"> a) Todas declaram variáveis com escopo global. <br>
                     <input type="radio" name="q1" value="b"> b) <strong>var</strong> e <strong>let</strong> permitem reatribuição, enquanto <strong>const</strong> não. <br>
                     <input type="radio" name="q1" value="c"> c) <strong>const</strong> permite reatribuição, enquanto <strong>var</strong> e <strong>let</strong> não. <br>
                     <input type="radio" name="q1" value="d"> d) Não há diferença entre elas.
                 </div>
-                <button onclick="mostrarProximaPergunta(2)">Próxima</button>
-            </div>
-            <div id="pergunta2" class="perguntas" style="display: none;">
-                <p>2. O que é hoisting em JavaScript?</p>
-                <div>
+                
+                <button id="proximaPergunta" onclick="mostrarProximaPergunta(2)" style="display: block;">Próxima</button>
+            </p>
+            <div id="perguntaContainer" style="display: none;">
+                <p id="perguntaTexto">2. O que é hoisting em JavaScript?
+                <div id="opcoes">
                         <input type="radio" name="q1" value="a"> a) O processo de elevar variáveis para o topo do escopo antes da execução. <br>
                         <input type="radio" name="q1" value="b"> b) A criação de funções anônimas. <br>
                         <input type="radio" name="q1" value="c"> c) A capacidade de modificar objetos imutáveis. <br>
                         <input type="radio" name="q1" value="d"> d) A forma como o JavaScript interpreta o código assíncrono.
                         <!-- resposta letra A -->
                 </div>
-                <button onclick="mostrarProximaPergunta(3)">Próxima</button>
-            </div>
-            <div id="pergunta3" class="perguntas" style="display: none;">
-                <p>3. Quais os tipos de dados primitivos em JavaScript?</p>
-                <div>
+                <button id="proximaPergunta" onclick="mostrarProximaPergunta(3)" style="display: none;">Próxima</button>
+            </p>
+            <div id="perguntaContainer" style="display: none;">
+                <p id="perguntaTexto">
+                3. Quais os tipos de dados primitivos em JavaScript?
+                <div id="opcoes">
                             <input type="radio" name="q1" value="a"> a) string, number, boolean, null, undefined, symbol <br>
                             <input type="radio" name="q1" value="b"> b) object, array, function <br>
                             <input type="radio" name="q1" value="c"> c) string, number, boolean, object, array <br>
                             <input type="radio" name="q1" value="d"> d) Apenas string e number
                             <!-- resposta letra A -->
                 </div>
-                <button onclick="mostrarProximaPergunta(4)">Próxima</button>
-            </div>
-            <div id="pergunta4" class="perguntas" style="display: none;">
-                <p>4. Qual a principal característica de uma arrow function?</p>
-                <div>
+                <button id="proximaPergunta" onclick="mostrarProximaPergunta(4)" style="display: none;">Próxima</button>
+            </p>
+            <div id="perguntaContainer" style="display: none;">
+                <p id="perguntaTexto">
+                4. Qual a principal característica de uma arrow function?
+                <div id="opcoes">
                     <input type="radio" name="q1" value="a"> a) Sintaxe mais concisa e escopo léxico. <br>
                     <input type="radio" name="q1" value="b"> b) Sempre retorna um valor. <br>
                     <input type="radio" name="q1" value="c"> c) Não pode ser usada com métodos de array. <br>
                     <input type="radio" name="q1" value="d"> d) É a única forma de criar funções em JavaScript moderno.
                     <!-- resposta letra A -->
                 </div>
-                <button onclick="mostrarProximaPergunta(5)">Próxima</button>
-            </div>
+                <button id="proximaPergunta" onclick="mostrarProximaPergunta(5)" style="display: none;">Próxima</button>
+            </p>
 
             <!-- Adicione perguntas 2 a 20 aqui seguindo o mesmo formato -->
-            <div id="pergunta5" class="perguntas" style="display: none;">
-                <p>5. O que é um closure em JavaScript?</p>
-                <div>
+            <div id="perguntaContainer" style="display: none;">
+                <p id="perguntaTexto">
+                5. O que é um closure em JavaScript?
+                <div id="opcoes">
                     <input type="radio" name="q1" value="a"> a) Uma função que não possui acesso ao seu escopo léxico.<br>
                     <input type="radio" name="q1" value="b"> b) Um objeto que armazena dados de sessão. <br>
                     <input type="radio" name="q1" value="c"> c) Uma função que tem acesso ao seu próprio escopo e ao escopo no qual foi definida. <br>
                     <input type="radio" name="q1" value="d"> d) Um tipo de dado primitivo em JavaScript.
                     <!-- resposta letra C -->
                 </div>
-                <button onclick="mostrarProximaPergunta(6)">Próxima</button>
-            </div>
+                <button id="proximaPergunta" onclick="mostrarProximaPergunta(6)" style="display: none;">Próxima</button>
+            </p>
             
-            <div id="pergunta6" class="perguntas" style="display: none;">
-                <p>6. O que o <strong>this</strong> representa em JavaScript?</p>
-                <div>
+            <div id="perguntaContainer" style="display: none;">
+                <p id="perguntaTexto">
+                6. O que o <strong>this</strong> representa em JavaScript?
+                <div id="opcoes">
                     <input type="radio" name="q1" value="a"> a) Uma palavra-chave que sempre se refere ao objeto global. <br>
                     <input type="radio" name="q1" value="b"> b) Um ponteiro para a função que está sendo executada. <br>
                     <input type="radio" name="q1" value="c"> c) Um objeto que armazena informações sobre a execução atual. <br>
                     <input type="radio" name="q1" value="d"> d) Um objeto que se refere ao objeto que está chamando a função.
                     <!-- resposta letra D -->
                 </div>
-                <button onclick="mostrarProximaPergunta(7)">Próxima</button>
-            </div>
+                <button id="proximaPergunta" onclick="mostrarProximaPergunta(7)" style="display: none;">Próxima</button>
+            </p>
             
-            <div id="pergunta7" class="perguntas" style="display: none;">
-                <p>7. Qual a principal diferença entre os operadores de comparação == e === em JavaScript?</p>
-                <div>
+            <div id="perguntaContainer" style="display: none;">
+                <p id="perguntaTexto">
+                7. Qual a principal diferença entre os operadores de comparação == e === em JavaScript?
+                <div id="opcoes">
                     <input type="radio" name="q1" value="a"> a) O operador == realiza uma comparação mais rigorosa, verificando tanto o valor quanto o tipo dos operandos. <br>
                     <input type="radio" name="q1" value="b"> b) O operador === realiza uma conversão de tipo antes de comparar os valores. <br>
                     <input type="radio" name="q1" value="c"> c) O operador == realiza uma comparação mais flexível, permitindo a conversão de tipos antes de comparar os valores. <br>
                     <input type="radio" name="q1" value="d"> d) Não há diferença entre os dois operadores, eles sempre retornam o mesmo resultado.
                     <!-- resposta letra C -->
                 </div>
-                <button onclick="mostrarProximaPergunta(8)">Próxima</button>
-            </div>
+                <button id="proximaPergunta" onclick="mostrarProximaPergunta(8)" style="display: none;">Próxima</button>
+            </p>
 
-            <div id="pergunta8" class="perguntas" style="display: none;">
-                <p>8. O que é o DOM e qual sua principal função em JavaScript?</p>
-                <div>
+            <div id="perguntaContainer" style="display: none;">
+                <p id="perguntaTexto">
+                8. O que é o DOM e qual sua principal função em JavaScript?
+                <div id="opcoes">
                     <input type="radio" name="q1" value="a"> a) Uma linguagem de programação utilizada para criar interfaces web. <br>
                     <input type="radio" name="q1" value="b"> b) Uma representação da estrutura de um documento HTML em forma de objeto, permitindo sua manipulação através de JavaScript. <br>
                     <input type="radio" name="q1" value="c"> c) Um protocolo de comunicação entre navegador e servidor. <br>
                     <input type="radio" name="q1" value="d"> d) Uma biblioteca JavaScript para criar animações.
                     <!-- resposta letra B -->
                 </div>
-                <button onclick="mostrarProximaPergunta(9)">Próxima</button>
+                <button id="proximaPergunta" onclick="mostrarProximaPergunta(9)" style="display: none;">Próxima</button>
             </div>
             
-            <div id="pergunta9" class="perguntas" style="display: none;">
-                <p>9. Qual das seguintes opções representa uma forma de criar um objeto em JavaScript?</p>
-                <div>
+            <div id="perguntaContainer" style="display: none;">
+                <p id="perguntaTexto">
+                9. Qual das seguintes opções representa uma forma de criar um objeto em JavaScript?
+                <div id="opcoes">
                     <input type="radio" name="q1" value="a"> a) Usando a palavra-chave. <strong>class</strong> <br>
                     <input type="radio" name="q1" value="b"> b) Utilizando a notação literal de objeto. <br>
                     <input type="radio" name="q1" value="c"> c) Através de construtores. <br>
                     <input type="radio" name="q1" value="d"> d) Todas as alternativas estão corretas.
                     <!-- resposta letra D -->
                 </div>
-                <button onclick="mostrarProximaPergunta(10)">Próxima</button>
-            </div>            
+                <button id="proximaPergunta" onclick="mostrarProximaPergunta(10)" style="display: none;">Próxima</button>
+            </p>            
             
-            <div id="pergunta10" class="perguntas" style="display: none;">
-                <p>10. Qual das alternativas melhor descreve o conceito de protótipos em JavaScript?</p>
-                <div>
+            <div id="perguntaContainer" style="display: none;">
+                <p id="perguntaTexto">
+                10. Qual das alternativas melhor descreve o conceito de protótipos em JavaScript?
+                <div id="opcoes">
                     <input type="radio" name="q1" value="a"> a) Uma forma de criar classes semelhantes a outras linguagens de programação, com herança e polimorfismo. <br>
                     <input type="radio" name="q1" value="b"> b) Um mecanismo que permite que objetos herdem propriedades e métodos de outros objetos, formando uma cadeia de protótipos. <br>
                     <input type="radio" name="q1" value="c"> c) Uma estrutura de dados utilizada para armazenar as propriedades de um objeto. <br>
                     <input type="radio" name="q1" value="d"> d) Uma função especial que cria novos objetos.
                     <!-- resposta letra B -->
                 </div>
-                <button onclick="mostrarProximaPergunta(11)">Próxima</button>
-            </div>
+                <button id="proximaPergunta" onclick="mostrarProximaPergunta(11)" style="display: none;">Próxima</button>
+            </p>
             
-            <div id="pergunta11" class="perguntas" style="display: none;">
-                <p>11. O que é uma Promise em JavaScript?</p>
-                <div>
+            <div id="perguntaContainer" style="display: none;">
+                <p id="perguntaTexto">
+                11. O que é uma Promise em JavaScript?
+                <div id="opcoes">
                     <input type="radio" name="q1" value="a"> a) Uma função que retorna um valor imediatamente. <br>
                     <input type="radio" name="q1" value="b"> b) Um objeto que representa a eventual conclusão (ou falha) de uma operação assíncrona. <br>
                     <input type="radio" name="q1" value="c"> c) Um tipo de dado primitivo como string ou number. <br>
                     <input type="radio" name="q1" value="d"> d) Uma estrutura de dados utilizada para armazenar informações de forma organizada.
                     <!-- resposta letra B -->
                 </div>
-                <button onclick="mostrarProximaPergunta(12)">Próxima</button>
-            </div>
+                <button id="proximaPergunta" onclick="mostrarProximaPergunta(12)" style="display: none;">Próxima</button>
+            </p>
 
-            <div id="pergunta12" class="perguntas" style="display: none;">
-                <p>12. Qual das alternativas abaixo descreve a principal diferença entre Fetch e XMLHttpRequest em JavaScript?</p>
-                <div>
+            <div id="perguntaContainer" style="display: none;">
+                <p id="perguntaTexto">
+                12. Qual das alternativas abaixo descreve a principal diferença entre Fetch e XMLHttpRequest em JavaScript?
+                <div id="opcoes">
                     <input type="radio" name="q1" value="a"> a) Fetch é mais antigo e menos eficiente que XMLHttpRequest. <br>
                     <input type="radio" name="q1" value="b"> b) XMLHttpRequest é mais fácil de usar e oferece mais funcionalidades que Fetch. <br>
                     <input type="radio" name="q1" value="c"> c) Fetch é uma API mais moderna, baseada em Promises, enquanto XMLHttpRequest utiliza callbacks. <br>
                     <input type="radio" name="q1" value="d"> d) Não há diferença significativa entre os dois, ambos servem para fazer requisições HTTP.
                     <!-- resposta letra C -->
                 </div>
-                <button onclick="mostrarProximaPergunta(13)">Próxima</button>
-            </div>
+                <button id="proximaPergunta" onclick="mostrarProximaPergunta(13)" style="display: none;">Próxima</button>
+            </p>
 
-            <div id="pergunta13" class="perguntas" style="display: none;">
-                <p>13.  Qual das alternativas abaixo descreve corretamente os conceitos de event bubbling e event capturing?</p>
-                <div>
+            <div id="perguntaContainer" style="display: none;">
+                <p id="perguntaTexto">
+                13.  Qual das alternativas abaixo descreve corretamente os conceitos de event bubbling e event capturing?
+                <div id="opcoes">
                     <input type="radio" name="q1" value="a"> a) Event bubbling é quando um evento se propaga para cima na árvore DOM, enquanto event capturing é quando um evento se propaga para baixo. <br>
                     <input type="radio" name="q1" value="b"> b) Event bubbling e event capturing são sinônimos e descrevem o mesmo processo de propagação de eventos. <br>
                     <input type="radio" name="q1" value="c"> c) Event capturing é quando um evento se propaga para cima na árvore DOM, enquanto event bubbling é quando um evento se propaga para baixo. <br>
                     <input type="radio" name="q1" value="d"> d) Event bubbling e event capturing são mecanismos internos do navegador e não podem ser controlados pelos desenvolvedores.
                     <!-- resposta letra A -->
                 </div>
-                <button onclick="mostrarProximaPergunta(14)">Próxima</button>
-            </div>
+                <button id="proximaPergunta" onclick="mostrarProximaPergunta(14)" style="display: none;">Próxima</button>
+            </p>
 
-            <div id="pergunta14" class="perguntas" style="display: none;">
-                <p>14.  Qual das alternativas abaixo descreve corretamente o funcionamento do operador spread (...) em JavaScript?</p>
-                <div>
+            <div id="perguntaContainer" style="display: none;">
+                <p id="perguntaTexto">
+                14.  Qual das alternativas abaixo descreve corretamente o funcionamento do operador spread (...) em JavaScript?
+                <div id="opcoes">
                     <input type="radio" name="q1" value="a"> a) O operador spread permite criar novas funções com base em funções existentes. <br>
                     <input type="radio" name="q1" value="b"> b) O operador spread é utilizado para concatenar strings de forma mais eficiente. <br>
                     <input type="radio" name="q1" value="c"> c) O operador spread expande um iterável (como um array) em elementos individuais em um contexto onde múltiplos elementos são esperados. <br>
                     <input type="radio" name="q1" value="d"> d) O operador spread serve apenas para criar cópias superficiais de objetos.
                     <!-- resposta letra C -->
                 </div>
-                <button onclick="mostrarProximaPergunta(15)">Próxima</button>
-            </div>   
+                <button id="proximaPergunta" onclick="mostrarProximaPergunta(15)" style="display: none;">Próxima</button>
+            </p>   
 
-            <div id="pergunta15" class="perguntas" style="display: none;">
-                <p>15.  Qual das alternativas abaixo descreve a maneira correta de criar um módulo em JavaScript?<div>
+            <div id="perguntaContainer" style="display: none;">
+                <p id="perguntaTexto">
+                15.  Qual das alternativas abaixo descreve a maneira correta de criar um módulo em JavaScript?
+                    <div id="opcoes">
                     <input type="radio" name="q1" value="a"> a) Definir um objeto global e adicionar as funções e variáveis desejadas a ele. <br>
                     <input type="radio" name="q1" value="b"> b) Utilizar a palavra-chave module para declarar um novo módulo e exportar as funcionalidades necessárias. <br>
                     <input type="radio" name="q1" value="c"> c) Envolver o código do módulo em uma função e retornar um objeto com as exportações. <br>
                     <input type="radio" name="q1" value="d"> d) Todas as alternativas estão corretas.
                     <!-- resposta letra C -->
-                </div>
+                    </div>
                 <button onclick="finalizarTeste()">Finalizar Teste</button>
-            </div> 
+                </p> 
 
         </div>
         
-        
     </main>
-    
-    <script>
-        let pontuacao = 0;
-        function calcularPontuacao() {}
-        const respostasCorretas = {
-            q1: 'b',
-            q2: 'a',
-            q3: 'a',
-            q4: 'a',
-            q5: 'c',
-            q6: 'd',
-            q7: 'c',
-            q8: 'b',
-            q9: 'd',
-            q10: 'b',
-            q11: 'b',
-            q12: 'c',
-            q13: 'a',
-            q14: 'c',
-            q15: 'c',
-            // Adicione as respostas corretas para as outras perguntas
-        };
-
-        function mostrarProximaPergunta(proximaPergunta) {
-            document.getElementById('pergunta' + (proximaPergunta - 1)).style.display = 'none';
-            document.getElementById('pergunta' + proximaPergunta).style.display = 'block';
-        }
-
-        function finalizarTeste() {
-            // Verifica as respostas
-            for (const [pergunta, respostaCorreta] of Object.entries(respostasCorretas)) {
-                const respostaUsuario = document.querySelector(`input[name="${pergunta}"]:checked`);
-                if (respostaUsuario && respostaUsuario.value === respostaCorreta) {
-                    pontuacao++;
-                }
-            }
-
-            // Exibe a pontuação
-            alert(`Você terminou o teste! Sua pontuação é: ${pontuacao}`);
-            if (pontuacao >= 15) { // Por exemplo, 15 de 20 para obter o certificado
-                alert("Parabéns! Você está qualificado para receber um certificado.");
-            } else {
-                alert("Infelizmente, você não atingiu a pontuação necessária para o certificado.");
-            }
-        }
-
-        function voltarAoMenu() {
-            window.location.href = "index.html"; 
-        }
-
-        // Função para contagem do tempo
-        let tempoRestante = 120 * 60; // 2 horas em segundos
-        const timerElement = document.getElementById('timer');
-
-        function atualizarTimer() {
-            const minutos = Math.floor(tempoRestante / 60);
-            const segundos = tempoRestante % 60;
-            timerElement.textContent = `${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
-            if (tempoRestante <= 0) {
-                alert("O tempo acabou! Você será redirecionado ao menu.");
-                voltarAoMenu();
-            }
-            tempoRestante--;
-        }
-
-        setInterval(atualizarTimer, 1000);
-    </script>
+    <script src="quest.js"></script>
 </body>
 <footer id="pagina-teste">
     <button onclick="finalizarTeste()">Finalizar</button>

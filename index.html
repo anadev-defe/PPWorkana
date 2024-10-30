@@ -12,12 +12,12 @@
 <body>
     <header id="cabecalho-principal">
         <hgroup>
-            <h1>Avalie suas habilidades</h1>
+            <h1>Avalie suas habilidades JavaScript</h1>
         </hgroup>
     </header>
     <h2>Para iniciar o teste é só clicar no botão <strong><u>INICIAR</u></strong></h2>
-    <p>Mas antes de começar leia as instruções</p>
-    <p>Clique fora da caixa para fechá-la</p>
+    <p>Mas antes de começar você deve saber umas coisinhas importantes!!</p>
+    <p>Clique na caixa para ler as informações.</p>
 
     <script>
         function mostrarTempo() {
@@ -26,9 +26,9 @@
         }
       </script>
       
-      <button id="tempo" onclick="mostrarTempo()">Tempo máximo</button>
+      <button id="tempo" onclick="mostrarTempo()">Tempo Máximo</button>
       <div id="caixaTempo" class="hidden">
-        <p>O tempo máximo para a realização desse teste é de 2 horas a partir do seu início. Então seja esperto e organize um tempo livre para se dar bem nesse teste!!</p>
+        <p>&rAarr;O tempo máximo para a realização desse teste é de <strong>2 horas</strong> a partir do seu início. Então seja esperto e organize um tempo livre para se dar bem!!</p>
       </div>
 
       <script>
@@ -40,7 +40,7 @@
       
       <button id="certificado" onclick="mostrarCertificado()">Certificado</button>
       <div id="caixaCertificado" class="hidden">
-        <p>Se você for aprovado, um certificado correspondente ao teste realizado será fornecido. E é IMPORTANTE destacar que a aquisição deste certificado terá custo.</p>
+        <p>&rAarr;Se você for aprovado nesse teste, um certificado será fornecido. O nome que irá no certificado é o que você informar ao questionário. E é <strong>IMPORTANTE</strong> destacar que a aquisição deste certificado terá custo.</p>
       </div>
       <script>
         function mostrarCertificado() {
@@ -51,7 +51,7 @@
 
     <button id="bonus" onclick="mostrarBonus()">Bônus</button>
     <div id="caixaBonus" class="hidden">
-      <p>Notícia incrível! Ao passar neste teste, você ganhará uma certificação oficial que será exibida no seu perfil Workana, aumentando suas chances de conseguir novos projetos e demonstrando sua expertise para os clientes. </p>
+      <p>&rAarr;<strong>Notícia incrível!!</strong> Ao passar neste teste, você ganhará uma certificação oficial que será exibida no seu perfil <i><strong>Workana</strong></i>, aumentando suas chances de conseguir novos projetos e demonstrando sua expertise para os clientes. </p>
     </div>
     <script>
       function mostrarBonus() {
@@ -62,7 +62,7 @@
 
 <button id="outros">Outros Testes</button>
 <div id="caixaOutros" style="display: none;">
-  <p>Caso não seja aprovado, não desanime!
+  <p>&rAarr;Caso não seja aprovado, não desanime!
     Podemos juntos encontrar um projeto que melhor se adapte ao seu conhecimento e experiência,
     para que você possa brilhar!</p>
 </div>
@@ -74,17 +74,17 @@
   });</script>
 <!-- Essa parte de "outros" está diferente das demais, para conseguir aparecer no hidden  -->
 
-    <p>Além de preencher esses requisitos</p>
+    <h3>Além de preencher esses requisitos</h3>
     <div class="requisitos">
         <ul style="list-style-type: circle;">
-            <li>Ter acesso a um computador com acesso a internet</li>
-            <li>Ter tempo disponível para realizar o teste no tempo previamente estimado</li>
-            <li>Informar ao finalizar o teste para que o resultado seja validado</li>
+            <li>Ter acesso a um computador com internet</li>
+            <li>Estar disponível para realizar o teste no tempo previamente estimado</li>
+            <li>Ao finalizar o teste acione nossa equipe para que o resultado seja validado</li>
         </ul>
     </div>
 
     <div class="botao-iniciar">
-        <p>Clique no botão abaixo para iniciar o teste.</p>
+        <h3>Clique no botão abaixo para iniciar o teste!</h3>
         <button onclick="irParaQuestionario()">Iniciar Teste</button>
     </div>
     
@@ -92,6 +92,7 @@
         function irParaQuestionario() {
             window.location.href = "quest.html"; 
         }
+
     </script>
 
     <script src="app.js"></script>
